@@ -1,0 +1,14 @@
+export { default as SeoIcon } from './SeoIcon';
+export { default as AdsIcon } from './AdsIcon';
+export { default as SocialIcon } from './SocialIcon';
+export { default as ContentIcon } from './ContentIcon';
+export { default as WebDevIcon } from './WebDevIcon';
+export { default as GlobalIcon } from './GlobalIcon';
+export { default as UkFocusIcon } from './UkFocusIcon';
+export { default as DataIcon } from './DataIcon';
+export { default as ReportIcon } from './ReportIcon';
+export { default as AnalyticsIcon } from './AnalyticsIcon';
+export { default as ChatBubbleIcon } from './ChatBubbleIcon';
+export { default as FacebookIcon } from './FacebookIcon';
+export { default as TwitterIcon } from './TwitterIcon';
+export { default as LinkedInIcon } from './LinkedInIcon';

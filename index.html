@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF--8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Enroute Hero Banner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* General Animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 15px 5px rgba(34, 211, 238, 0.4); } /* cyan-400 */
+        50% { box-shadow: 0 0 25px 10px rgba(34, 211, 238, 0.7); } /* cyan-400 */
+      }
+      
+      /* Particle Background Animations */
+      @keyframes particle-flow {
+          0% { transform: translateY(0) scale(1); opacity: 0; }
+          50% { opacity: 0.7; }
+          100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+      }
+      
+      /* About Us Section Animations */
+      @keyframes fade-in-slide-left {
+        from {
+          opacity: 0;
+          transform: translateX(-40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fade-in-scale-up {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes icon-float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      /* Why Choose Us Section Animations */
+      @keyframes pop-in-bounce {
+        0% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1.15);
+        }
+        80% {
+          transform: scale(0.95);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes flowing-gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      /* Vision & Mission Section Animations */
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* Insights Section Animations */
+       @keyframes icon-drift {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(15px, -20px); }
+        50% { transform: translate(-10px, 10px); }
+        75% { transform: translate(20px, 15px); }
+        100% { transform: translate(0, 0); }
+      }
+
+      /* Footer Animations */
+      @keyframes fade-in-slide-up {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+      }
+      
+      /* Animation Utility Classes */
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .animate-pulse-glow {
+        animation: pulse-glow 3s ease-in-out infinite;
+      }
+      .particle {
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgba(165, 243, 252, 0.3); /* light cyan */
+        animation-name: particle-flow;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .animate-fade-in-slide-left {
+        animation: fade-in-slide-left 1s ease-out forwards;
+      }
+      .animate-fade-in-scale-up {
+        animation: fade-in-scale-up 1s ease-out forwards;
+      }
+       .animate-icon-float {
+        animation: icon-float 5s ease-in-out infinite;
+      }
+      .animate-pop-in-bounce {
+        animation: pop-in-bounce 0.8s ease-out forwards;
+      }
+      .animate-flowing-gradient {
+          background-size: 200% 200%;
+          animation: flowing-gradient 15s ease infinite;
+      }
+      .animate-spin-slow {
+        animation: spin-slow 40s linear infinite;
+      }
+      .animate-icon-drift {
+        animation: icon-drift 20s ease-in-out infinite;
+      }
+      .animate-fade-in-slide-up {
+        animation: fade-in-slide-up 1s ease-out forwards;
+      }
+      
+      /* 3D Utility Classes */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+      }
+
+      /* Custom utility classes for animation delays and durations */
+      .animation-delay-100 { animation-delay: 100ms; }
+      .animation-delay-200 { animation-delay: 200ms; }
+      .animation-delay-300 { animation-delay: 300ms; }
+      .animation-delay-500 { animation-delay: 500ms; }
+      .animation-delay-700 { animation-delay: 700ms; }
+      .animation-delay-1000 { animation-delay: 1000ms; }
+      .animation-delay-2000 { animation-delay: 2000ms; }
+      .animation-delay-3000 { animation-delay: 3000ms; }
+      .animation-delay-4000 { animation-delay: 4000ms; }
+      .animation-delay-5000 { animation-delay: 5000ms; }
+      .animation-duration-15s { animation-duration: 15s; }
+      .animation-duration-20s { animation-duration: 20s; }
+      .animation-duration-25s { animation-duration: 25s; }
+      .animation-duration-30s { animation-duration: 30s; }
+      .animation-duration-35s { animation-duration: 35s; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
